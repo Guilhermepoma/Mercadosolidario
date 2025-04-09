@@ -9,7 +9,7 @@ body {
 }
 
 header {
-  background-color: #014aad;
+  background-color: #00408ef2;
   color: white;
   padding: 16px 0;
 }
@@ -23,11 +23,11 @@ header {
 .left-header {
   display: flex;
   align-items: center;
-  gap: 40px; /* aumenta o espaço entre logo e instagram */
+  gap: 40px;
 }
 
 .logo-img {
-  height: 65px; /* aumenta o tamanho da logo */
+  height: 65px;
 }
 
 .instagram {
@@ -37,7 +37,7 @@ header {
   align-items: center;
   gap: 10px;
   font-weight: bold;
-  font-size: 20px; /* aumenta o tamanho da fonte do instagram */
+  font-size: 20px;
 }
 
 .instagram img {
@@ -45,7 +45,7 @@ header {
 }
 
 .navbar {
-  background-color: #003d8a;
+  background-color: blue;
   padding: 14px 0;
 }
 
@@ -59,7 +59,7 @@ header {
   color: white;
   text-decoration: none;
   font-weight: 600;
-  font-size: 18px; /* aumenta o tamanho dos links */
+  font-size: 18px;
 }
 
 .hero {
@@ -82,5 +82,106 @@ header {
   color: #f7d708;
   font-size: 48px;
   font-weight: 700;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.sobre-nos {
+  background-color: white;
+  padding: 60px 20px;
+}
+
+.content-wrapper {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.texto {
+  flex: 1;
+  min-width: 300px;
+}
+
+.texto h3 {
+  font-size: 28px;
+  color: #002060;
+  border-left: 5px solid #f7d708;
+  padding-left: 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.texto p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.destaque-laranja {
+  color: #f76b07;
+  font-weight: bold;
+}
+
+/* 🔽 AJUSTES APLICADOS AQUI 🔽 */
+.imagens {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-top {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.img-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.img-row img {
+  width: 48%;
+  max-width: 240px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+/* 🔼 FIM DOS AJUSTES 🔼 */
+
+.edicao-2025 {
+  background-color: #003f8f;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.edicao-2025 h2 {
+  font-size: 32px;
+  border-left: 5px solid #f7d708;
+  display: inline-block;
+  padding-left: 10px;
+}
+
+/* ✅ Responsividade extra */
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .img-row img {
+    width: 100%;
+    max-width: 100%;
+  }
 }
