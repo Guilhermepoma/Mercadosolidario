@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  background-color: #014aad;
+  color: white;
+  padding: 16px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.left-header {
+  display: flex;
+  align-items: center;
+  gap: 40px; /* aumenta o espaço entre logo e instagram */
+}
+
+.logo-img {
+  height: 65px; /* aumenta o tamanho da logo */
+}
+
+.instagram {
+  color: #f7d708;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 20px; /* aumenta o tamanho da fonte do instagram */
+}
+
+.instagram img {
+  height: 24px;
+}
+
+.navbar {
+  background-color: #003d8a;
+  padding: 14px 0;
+}
+
+.navbar nav {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.navbar nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px; /* aumenta o tamanho dos links */
+}
+
+.hero {
+  position: relative;
+  height: 90vh;
+  background: url('imgs/banner.avif') no-repeat center center/cover;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(1, 1, 1, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay h2 {
+  color: #f7d708;
+  font-size: 48px;
+  font-weight: 700;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+}
