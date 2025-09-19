@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeria - Mercado Solidário</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo-section">
+          <img src="imgs/logo.jpg" alt="Logo Mercado Solidário" class="logo-img">
+        </div>
+        <div class="instagram-section">
+          <a href="https://instagram.com/mercadosolidariooficial" target="_blank" class="instagram">
+            <img src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new.png" alt="Instagram" />
+            @mercadosolidariooficial
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="navbar">
+    <nav>
+      <a href="index.html">SOBRE NÓS</a>
+      <a href="metas.html">METAS</a>
+      <a href="galeria.html" class="active">GALERIA</a>
+      <a href="#">CONTATO</a>
+    </nav>
+  </div>
+
+  <section class="galeria-hero">
+    <div class="overlay">
+      <h2>Galeria de Momentos</h2>
+      <p>Reviva os melhores momentos do Mercado Solidário</p>
+    </div>
+  </section>
+
+  <section class="galeria-content">
+    <div class="container">
+      <div class="galeria-wrapper">
+        
+        <div class="galeria-section">
+          <h3>Edição 2024</h3>
+          <div class="galeria-grid">
+            <div class="galeria-item" onclick="openModal('imgs/1.avif')">
+              <img src="imgs/1.avif" alt="Voluntários em grupo - 2024">
+              <div class="galeria-overlay">
+                <span class="galeria-title">Equipe de Voluntários</span>
+                <span class="galeria-desc">Mais de 120 voluntários unidos pela causa</span>
+              </div>
+            </div>
+            
+            <div class="galeria-item" onclick="openModal('imgs/2.avif')">
+              <img src="imgs/2.avif" alt="Distribuição de mantimentos - 2024">
+              <div class="galeria-overlay">
+                <span class="galeria-title">Distribuição</span>
+                <span class="galeria-desc">Organizando os mantimentos arrecadados</span>
+              </div>
+            </div>
+            
+            <div class="galeria-item" onclick="openModal('imgs/3.avif')">
+              <img src="imgs/3.avif" alt="Foto aérea dos voluntários formando '16T'">
+              <div class="galeria-overlay">
+                <span class="galeria-title">16 Toneladas</span>
+                <span class="galeria-desc">Celebrando o resultado alcançado</span>
+              </div>
+            </div>
+            
+            <div class="galeria-item" onclick="openModal('imgs/banner.avif')">
+              <img src="imgs/banner.avif" alt="Banner do evento">
+              <div class="galeria-overlay">
+                <span class="galeria-title">Evento Principal</span>
+                <span class="galeria-desc">O grande dia da arrecadação</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="galeria-section">
+          <h3>Momentos Especiais</h3>
+          <div class="galeria-grid">
+            <div class="galeria-item placeholder" onclick="openModal('imgs/1.avif')">
+              <img src="imgs/1.avif" alt="Momento especial 1">
+              <div class="galeria-overlay">
+                <span class="galeria-title">Solidariedade</span>
+                <span class="galeria-desc">Pessoas ajudando pessoas</span>
+              </div>
+            </div>
+            
+            <div class="galeria-item placeholder" onclick="openModal('imgs/2.avif')">
+              <img src="imgs/2.avif" alt="Momento especial 2">
+              <div class="galeria-overlay">
+                <span class="galeria-title">Trabalho em Equipe</span>
+                <span class="galeria-desc">Unidos por uma causa maior</span>
+              </div>
+            </div>
+            
+            <div class="galeria-item placeholder" onclick="openModal('imgs/3.avif')">
+              <img src="imgs/3.avif" alt="Momento especial 3">
+              <div class="galeria-overlay">
+                <span class="galeria-title">Resultado</span>
+                <span class="galeria-desc">O fruto do trabalho coletivo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="galeria-stats">
+          <div class="stat-item">
+            <span class="stat-icon">📸</span>
+            <span class="stat-text">Mais de 500 fotos registradas</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-icon">🎥</span>
+            <span class="stat-text">Documentário completo disponível</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-icon">📱</span>
+            <span class="stat-text">Siga no Instagram para mais conteúdo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal para visualização das imagens -->
+  <div id="imageModal" class="modal" onclick="closeModal()">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img id="modalImage" src="" alt="Imagem ampliada">
+    </div>
+  </div>
+
+  <script>
+    function openModal(imageSrc) {
+      const modal = document.getElementById('imageModal');
+      const modalImage = document.getElementById('modalImage');
+      modal.style.display = 'block';
+      modalImage.src = imageSrc;
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('imageModal');
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    // Fechar modal com ESC
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+</html>
+
