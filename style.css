@@ -209,11 +209,6 @@ header {
 
 
 /* Estilos para a página de metas */
-.navbar nav a.active {
-  background-color: #f7d708;
-  color: #034794;
-}
-
 .metas-hero {
   position: relative;
   height: 60vh;
