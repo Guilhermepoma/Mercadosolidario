@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato - Mercado Solidário</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="imgs/logo.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo-section">
+          <img src="imgs/logo.jpg" alt="Logo Mercado Solidário" class="logo-img">
+        </div>
+        <div class="instagram-section">
+          <a href="https://instagram.com/mercadosolidariooficial" target="_blank" class="instagram">
+            <img src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new.png" alt="Instagram" />
+            @mercadosolidariooficial
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="navbar">
+    <nav>
+      <a href="index.html">INICIO</a>
+      <a href="metas.html">METAS</a>
+      <a href="galeria.html">GALERIA</a>
+      <a href="contato.html">CONTATO</a>
+    </nav>
+  </div>
+
+  <section class="galeria-hero">
+    <div class="hero-content">
+      <h2>Entre em Contato</h2>
+      <p>Faça parte da nossa rede de solidariedade</p>
+    </div>
+  </section>
+
+  <section class="contato-content">
+    <div class="container">
+      <div class="contato-wrapper">
+        
+        <div class="contato-info">
+          <h3>Como nos encontrar</h3>
+          
+          <div class="info-card">
+            <div class="info-icon">📧</div>
+            <div class="info-details">
+              <h4>E-mail</h4>
+              <p>contato@mercadosolidario.com.br</p>
+              <p>voluntarios@mercadosolidario.com.br</p>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">📱</div>
+            <div class="info-details">
+              <h4>WhatsApp</h4>
+              <p>(48) 99999-9999</p>
+              <p>Atendimento de segunda a sexta, 8h às 18h</p>
+            </div>
+          </div>
+
+          <!-- <div class="info-card">
+            <div class="info-icon">📍</div>
+            <div class="info-details">
+              <h4>Localização</h4>
+              <p>Criciúma - Santa Catarina</p>
+              <p>Endereço disponível para voluntários</p>
+            </div>
+          </div> -->
+
+          <div class="info-card">
+            <div class="info-icon">📷</div>
+            <div class="info-details">
+              <h4>Redes Sociais</h4>
+              <p>@mercadosolidariooficial</p>
+              <p>Acompanhe nossas atividades no Instagram</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contato-form">
+          <h3>Envie sua mensagem</h3>
+          <form id="contatoForm">
+            <div class="form-group">
+              <label for="nome">Nome completo *</label>
+              <input type="text" id="nome" name="nome" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">E-mail *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="telefone">Telefone</label>
+              <input type="tel" id="telefone" name="telefone">
+            </div>
+
+            <div class="form-group">
+              <label for="assunto">Assunto *</label>
+              <select id="assunto" name="assunto" required>
+                <option value="">Selecione um assunto</option>
+                <option value="voluntario">Quero ser voluntário</option>
+                <option value="apoiador">Quero ser apoiador/patrocinador</option>
+                <option value="doacao">Informações sobre doações</option>
+                <option value="instituicao">Sou de uma instituição beneficiária</option>
+                <option value="imprensa">Imprensa</option>
+                <option value="outros">Outros</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="mensagem">Mensagem *</label>
+              <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Conte-nos como podemos ajudar ou como você gostaria de contribuir..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="como-ajudar">
+        <h3>Como você pode ajudar</h3>
+        <div class="ajuda-grid">
+          <div class="ajuda-card">
+            <div class="ajuda-icon">🏢</div>
+            <h4>Apoio Empresarial</h4>
+            <p>Empresas podem apoiar com recursos, logística, divulgação ou patrocínio. Juntos somos mais fortes!</p>
+          </div>
+
+          <div class="ajuda-card">
+            <div class="ajuda-icon">📦</div>
+            <h4>Doações</h4>
+            <p>Contribua com mantimentos não perecíveis, produtos de higiene e limpeza para as famílias necessitadas.</p>
+          </div>
+
+          <div class="ajuda-card">
+            <div class="ajuda-icon">📢</div>
+            <h4>Divulgação</h4>
+            <p>Compartilhe nossa causa nas redes sociais e ajude a espalhar a solidariedade pela comunidade.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById('contatoForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Simulação de envio do formulário
+      const submitBtn = document.querySelector('.btn-enviar');
+      const originalText = submitBtn.textContent;
+      
+      submitBtn.textContent = 'Enviando...';
+      submitBtn.disabled = true;
+      
+      setTimeout(() => {
+        alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+        this.reset();
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      }, 2000);
+    });
+
+    // Máscara para telefone
+    document.getElementById('telefone').addEventListener('input', function(e) {
+      let value = e.target.value.replace(/\D/g, '');
+      if (value.length <= 11) {
+        value = value.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+        if (value.length < 14) {
+          value = value.replace(/(\d{2})(\d{4})(\d{4})/, '($1) $2-$3');
+        }
+      }
+      e.target.value = value;
+    });
+  </script>
+</body>
+</html>
+

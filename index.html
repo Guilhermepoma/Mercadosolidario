@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mercado Solidário</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="imgs/logo.jpg">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -29,7 +30,7 @@
       <a href="index.html">INICIO</a>
       <a href="metas.html">METAS</a>
       <a href="galeria.html">GALERIA</a>
-      <a href="#">CONTATO</a>
+      <a href="contato.html">CONTATO</a>
     </nav>
   </div>
 
@@ -40,22 +41,28 @@
   </section>
 
   <section class="sobre-nos">
-    <div class="content-wrapper">
-      <div class="texto">
-        <h3>Sobre o Mercado Solidário</h3>
-        <p class="destaque-laranja">
-          Nas 11 Edições já feitas foram arrecadadas 91,9 toneladas de mantimentos!
-        </p>
-        <p>
-          O Mercado Solidário é uma ação social que tem por objetivo a arrecadação de mantimentos, para doar para Instituições de apoio na cidade de Criciúma.
-        </p>
-  
-        <h3>Mercado Solidário 2024</h3>
-        <p>
-          Na 11ª edição do Mercado, foi arrecadado 16 toneladas de mantimentos para 17 Instituições de Criciúma e para o Rio Grande do Sul, e contou com uma força tarefa de mais de 120 voluntários.
-        </p>
-      </div>
-  
+  <div class="content-wrapper">
+    
+    <div class="texto">
+      <h2>Sobre o Mercado Solidário</h2>
+      <p class="destaque-laranja">
+        Já arrecadamos <span>91,9 toneladas</span> de mantimentos em 11 edições!
+      </p>
+      <p>
+        O <strong>Mercado Solidário</strong> é uma ação social que tem como objetivo arrecadar alimentos 
+        para instituições de apoio em <strong>Criciúma</strong>.
+      </p>
+
+      <h2>Mercado Solidário 2024</h2>
+      <p>
+        Na <strong>11ª edição</strong>, conseguimos arrecadar 
+        <span class="destaque-numero">16 toneladas</span> de mantimentos, que foram destinados a 
+        <strong>17 instituições de Criciúma</strong> e ao <strong>Rio Grande do Sul</strong>. 
+        Esse resultado só foi possível graças ao empenho de mais de 
+        <strong>120 voluntários</strong>.
+      </p>
+    </div>
+
       <div class="imagens">
         <img src="imgs/1.avif" alt="Voluntários em grupo" class="img-top">
         <div class="img-row">
@@ -63,7 +70,51 @@
           <img src="imgs/3.avif" alt="Foto aérea dos voluntários formando '16T'">
         </div>
       </div>
+
     </div>
   </section>
+
+
+  <section class="apoiadores">
+    <div class="container">
+      <h3>Nossos Apoiadores</h3>
+      <p class="apoiadores-subtitle">Empresas e organizações que tornam o Mercado Solidário possível</p>
+      
+      <div class="carousel-container">
+        <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-slide">
+            <img src="imgs/apoiadores1.jpg" alt="Apoiadores - Grupo 1">
+          </div>
+          <div class="carousel-slide">
+            <img src="imgs/apoiadores2.jpg" alt="Apoiadores - Grupo 2">
+          </div>
+          <div class="carousel-slide">
+            <img src="imgs/apoiadores3.jpg" alt="Apoiadores - Grupo 3">
+          </div>
+          <div class="carousel-slide">
+            <img src="imgs/apoiadores3.jpg" alt="Apoiadores - Grupo 3">
+          </div>
+        </div>
+        
+        <button class="carousel-btn prev" onclick="moveCarousel(-1)">&#8249;</button>
+        <button class="carousel-btn next" onclick="moveCarousel(1)">&#8250;</button>
+        
+        <div class="carousel-dots">
+          <span class="dot active" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+      </div>
+      
+      <div class="apoio-cta">
+        <h4>Quer apoiar nossa causa?</h4>
+        <p>Entre em contato conosco e faça parte desta rede de solidariedade!</p>
+        <a href="contato.html" class="btn-apoiar">Seja um Apoiador</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/carrosel_index.js"></script>
 </body>
 </html>

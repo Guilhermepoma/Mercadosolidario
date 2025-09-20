@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Metas - Mercado Solidário</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="imgs/logo.jpg">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -30,12 +31,12 @@
       <a href="index.html">INICIO</a>
       <a href="metas.html">METAS</a>
       <a href="galeria.html">GALERIA</a>
-      <a href="#">CONTATO</a>
+      <a href="contato.html">CONTATO</a>
     </nav>
   </div>
 
-  <section class="metas-hero">
-    <div class="overlay">
+  <section class="galeria-hero">
+    <div class="hero-content">
       <h2>Nossas Metas Alcançadas</h2>
       <p>Acompanhe o crescimento do Mercado Solidário ao longo dos anos</p>
     </div>
@@ -127,98 +128,7 @@
     </div>
   </section>
 
-  <script>
-    // Dados para o gráfico
-    const ctx = document.getElementById('graficoGeral').getContext('2d');
-    const graficoGeral = new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: ['2019','2020','2021', '2022', '2023', '2024', '2025'],
-        datasets: [{
-          label: 'Toneladas Arrecadadas',
-          data: [10, 12, 14, 16, 18, 20, 22], /* Toneladas Arrecadas */
-          backgroundColor: [
-            '#034794',
-            '#0056b3',
-            '#f7d708',
-            '#f76b07',
-            '#28a745',
-            '#6f42c1',
-            '#d11507',
-            '#20c997',
-            '#ff5733',
-            '#ffc107'
-          ],
-          borderColor: [
-            '#034794',
-            '#0056b3',
-            '#f7d708',
-            '#f76b07',
-            '#28a745',
-            '#6f42c1',
-            '#d11507',
-            '#20c997',
-            '#ff5733',
-            '#ffc107'
-          ],
-          borderWidth: 2,
-          borderRadius: 8,
-          borderSkipped: false,
-        }]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          legend: {
-            display: false
-          },
-          tooltip: {
-            backgroundColor: 'rgba(0, 0, 0, 0.8)',
-            titleColor: '#fff',
-            bodyColor: '#fff',
-            borderColor: '#f7d708',
-            borderWidth: 1
-          }
-        },
-        scales: {
-          y: {
-            beginAtZero: true,
-            title: {
-              display: true,
-              text: 'Toneladas',
-              color: '#333',
-              font: {
-                size: 14,
-                weight: 'bold'
-              }
-            },
-            grid: {
-              color: 'rgba(0, 0, 0, 0.1)'
-            }
-          },
-          x: {
-            title: {
-              display: true,
-              text: 'Anos',
-              color: '#333',
-              font: {
-                size: 14,
-                weight: 'bold'
-              }
-            },
-            grid: {
-              display: false
-            }
-          }
-        },
-        animation: {
-          duration: 2000,
-          easing: 'easeInOutQuart'
-        }
-      }
-    });
-  </script>
+  <script src="js/grafico_metas.js"></script>
 </body>
 </html>
 
