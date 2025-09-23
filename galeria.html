@@ -29,7 +29,7 @@
     <nav>
       <a href="index.html">INICIO</a>
       <a href="metas.html">METAS</a>
-      <a href="galeria.html">GALERIA</a>
+      <a href="galeria.html" class="active">GALERIA</a>
       <a href="contato.html">CONTATO</a>
     </nav>
   </div>
@@ -85,7 +85,7 @@
         <div class="galeria-section">
           <h3>Momentos Especiais</h3>
           <div class="galeria-grid">
-            <div class="galeria-item placeholder" onclick="openModal('imgs/1.avif')">
+            <div class="galeria-item" onclick="openModal('imgs/1.avif')">
               <img src="imgs/1.avif" alt="Momento especial 1">
               <div class="galeria-overlay">
                 <span class="galeria-title">Solidariedade</span>
@@ -93,7 +93,7 @@
               </div>
             </div>
             
-            <div class="galeria-item placeholder" onclick="openModal('imgs/2.avif')">
+            <div class="galeria-item" onclick="openModal('imgs/2.avif')">
               <img src="imgs/2.avif" alt="Momento especial 2">
               <div class="galeria-overlay">
                 <span class="galeria-title">Trabalho em Equipe</span>
@@ -101,7 +101,7 @@
               </div>
             </div>
             
-            <div class="galeria-item placeholder" onclick="openModal('imgs/3.avif')">
+            <div class="galeria-item" onclick="openModal('imgs/3.avif')">
               <img src="imgs/3.avif" alt="Momento especial 3">
               <div class="galeria-overlay">
                 <span class="galeria-title">Resultado</span>
@@ -114,19 +114,56 @@
     </div>
   </section>
 
-  <!-- Modal para visualização das imagens -->
-  <div id="imageModal" class="modal" onclick="closeModal()">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <img id="modalImage" src="" alt="Imagem ampliada">
+    <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <img src="imgs/logo.jpg" alt="Logo Mercado Solidário" class="footer-logo">
+          <p>Transformando vidas através da solidariedade em Criciúma</p>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Links Rápidos</h4>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="metas.html">Metas</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Redes Sociais</h4>
+          <div class="social-links">
+            <a href="https://instagram.com/mercadosolidariooficial" target="_blank">
+              <i class="fab fa-instagram"></i>
+              @mercadosolidariooficial
+            </a>
+            <a href="https://wa.me/5548999999999" target="_blank">
+              <i class="fab fa-whatsapp"></i>
+              (48) 99999-9999
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 Mercado Solidário. Todos os direitos reservados.</p>
+      </div>
     </div>
+  </footer>
+  
+  <!-- Modal para visualização das imagens -->
+  <div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img id="modalImage" src="" alt="Imagem ampliada">
   </div>
 
   <script>
     function openModal(imageSrc) {
       const modal = document.getElementById('imageModal');
       const modalImage = document.getElementById('modalImage');
-      modal.style.display = 'block';
+      modal.style.display = 'flex';
       modalImage.src = imageSrc;
       document.body.style.overflow = 'hidden';
     }
@@ -137,7 +174,6 @@
       document.body.style.overflow = 'auto';
     }
 
-    // Fechar modal com ESC
     document.addEventListener('keydown', function(event) {
       if (event.key === 'Escape') {
         closeModal();
@@ -146,4 +182,3 @@
   </script>
 </body>
 </html>
-
