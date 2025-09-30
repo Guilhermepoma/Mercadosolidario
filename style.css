@@ -267,7 +267,7 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .sobre-text {
@@ -1793,7 +1793,7 @@ header {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
   justify-content: center; /* Centraliza os cards no grid */
-  align-items: start;
+  align-items: stretch;
   margin-top: 40px;
 }
 
@@ -1860,4 +1860,3 @@ header {
     grid-template-columns: 1fr;
   }
 }
-
