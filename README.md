@@ -27,4 +27,4 @@ O **MercadoSolidario** é um projeto web que busca fomentar redes de ajuda mútu
 - Servidor/backend: PHP  
 - Banco de dados: MySQL
 
-https://github.com/Guilhermepoma/Mercadosolidario/blob/main/imgs/logo.jpg?raw=true
+![Logo do MS](https://github.com/Guilhermepoma/Mercadosolidario/blob/main/imgs/logo.jpg?raw=true)
