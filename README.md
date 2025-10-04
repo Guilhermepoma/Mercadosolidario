@@ -7,39 +7,24 @@ Uma plataforma para facilitar a solidariedade comunitária, conectando pessoas q
 - [Visão Geral](#visão-geral)  
 - [Funcionalidades](#funcionalidades)  
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)  
-- [Como Executar Localmente](#como-executar-localmente)  
-- [Estrutura de Pastas](#estrutura-de-pastas)  
-- [Contribuição](#contribuição)  
-- [Licença](#licença)  
 
 ## Visão Geral
 
-O **MercadoSolidario** é um projeto web que busca fomentar redes de ajuda mútua, onde doadores podem oferecer itens e voluntários podem se mobilizar para distribuição ou apoio local — tudo isso de forma transparente e colaborativa.
+O **MercadoSolidario** é um projeto web que busca fomentar redes de ajuda mútua, onde doadores podem oferecer itens e voluntários podem se mobilizar para distribuição ou apoio local.
 
 ## Funcionalidades
 
 - Página inicial com apresentação do projeto  
-- Galeria de fotos / imagens de impacto  
+- Galeria de fotos 
 - Página de metas / objetivos  
-- Página de contato  
-- Sistema simples de cadastro / login (se aplicável)  
-- Painel administrativo para gerenciar doações ou ofertas  
+- Página de contato 
 - Responsividade para dispositivos móveis  
-
-> ⚠️ Ajuste esta lista conforme o que já foi implementado ou planejado no seu repositório.
 
 ## Tecnologias Utilizadas
 
 - HTML5 / CSS3  
 - JavaScript  
-- (Se usar) frameworks ou bibliotecas: React, Vue, Angular, etc.  
-- Servidor/backend (se aplicável): Node.js, PHP, etc.  
-- Banco de dados (se aplicável): MySQL, MongoDB, etc.
+- Servidor/backend: PHP  
+- Banco de dados: MySQL
 
-> Indique as versões (ex: Node.js v16, etc.)
-
-## Como Executar Localmente
-
-1. Clone o repositório  
-   ```bash
-   git clone https://github.com/Guilhermepoma/Mercadosolidario.git
+<img src="https://raw.githubusercontent.com/Guilhermepoma/Mercadosolidario/refs/heads/main/imgs/logo.jpg" style="display: block; width: auto; margin: 0 auto;">
