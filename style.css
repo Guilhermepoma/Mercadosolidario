@@ -545,6 +545,10 @@ header {
   letter-spacing: 1px;
 }
 
+#formulario {
+  text-align: center;
+}
+
 .impact-desc {
   color: #666;
   line-height: 1.5;
