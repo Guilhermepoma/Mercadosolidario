@@ -1786,7 +1786,7 @@ header {
 }
 
 @keyframes zoomIn {
-  from { transform: scale(0.8); }
+  from { transform: scale(0.5); }
   to { transform: scale(1); }
 }
 
