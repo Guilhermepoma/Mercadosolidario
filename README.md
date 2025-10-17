@@ -6,7 +6,8 @@ Uma plataforma para facilitar a solidariedade comunitária, conectando pessoas q
 
 - [Visão Geral](#visão-geral)  
 - [Funcionalidades](#funcionalidades)  
-- [Tecnologias Utilizadas](#tecnologias-utilizadas)  
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Visão Geral](https://guilhermepoma.github.io/Mercadosolidario/)
 
 ## Visão Geral
 
