@@ -420,10 +420,12 @@ header {
 }
 
 .image-main {
-  position: relative;
-  overflow: hidden;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    position: relative;
+    height: 220px;     /* altura */
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    background-color: #ddd; /* só para visualizar se não tiver imagem */
 }
 
 .main-img {
