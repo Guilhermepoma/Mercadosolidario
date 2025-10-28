@@ -1,0 +1,177 @@
+<?php
+session_start();
+require_once 'db.php';
+
+// Verifica se o usuário está logado e se é admin
+if (!isset($_SESSION['user_id']) || $_SESSION['user_role'] !== 'admin') {
+    header("Location: login.php");
+    exit();
+}
+
+// Lógica de gestão de CRUD (será implementada na próxima fase)
+// Por enquanto, apenas o HTML da área administrativa moderna.
+
+?>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Administrativo | Projeto Massa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body class="admin-body">
+    <div class="admin-sidebar">
+        <div class="sidebar-header">
+            <h2>Admin Panel</h2>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#" class="nav-item active" data-tab="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            <a href="#" class="nav-item" data-tab="users"><i class="fas fa-users"></i> Usuários</a>
+            <a href="#" class="nav-item" data-tab="contents"><i class="fas fa-box-open"></i> Conteúdo (Cestas)</a>
+            <a href="#" class="nav-item" data-tab="requests"><i class="fas fa-hand-holding-heart"></i> Solicitações</a>
+            <a href="#" class="nav-item" data-tab="settings"><i class="fas fa-cog"></i> Configurações</a>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="logout.php" class="btn-logout"><i class="fas fa-sign-out-alt"></i> Sair</a>
+        </div>
+    </div>
+
+    <div class="admin-main-content">
+        <header class="admin-header">
+            <h1>Bem-vindo, <?php echo htmlspecialchars($_SESSION['user_name']); ?>!</h1>
+        </header>
+
+        <main class="admin-content">
+            <!-- Dashboard -->
+            <section id="dashboard" class="tab-content active">
+                <h2>Dashboard</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Total de Usuários</h3>
+                        <p id="total-users">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-box-open"></i>
+                        <h3>Conteúdos Cadastrados</h3>
+                        <p id="total-contents">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <h3>Solicitações Pendentes</h3>
+                        <p id="pending-requests">0</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Usuários -->
+            <section id="users" class="tab-content">
+                <h2>Gerenciar Usuários</h2>
+                <div class="content-table-container">
+                    <table class="content-table" id="users-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>E-mail</th>
+                                <th>Função</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Dados carregados via JS/PHP -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Conteúdo (Cestas) -->
+            <section id="contents" class="tab-content">
+                <h2>Gerenciar Conteúdo (Cestas Básicas)</h2>
+                <button class="btn btn-success mb-3" onclick="openContentModal()"><i class="fas fa-plus"></i> Adicionar Novo Conteúdo</button>
+                <div class="content-table-container">
+                    <table class="content-table" id="contents-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>Descrição</th>
+                                <th>Preço</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Dados carregados via JS/PHP -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Solicitações -->
+            <section id="requests" class="tab-content">
+                <h2>Gerenciar Solicitações</h2>
+                <div class="content-table-container">
+                    <table class="content-table" id="requests-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Usuário</th>
+                                <th>Conteúdo</th>
+                                <th>Data</th>
+                                <th>Status</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Dados carregados via JS/PHP -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Configurações -->
+            <section id="settings" class="tab-content">
+                <h2>Configurações do Sistema</h2>
+                <div class="card">
+                    <h3>Mensagem de Boas-Vindas</h3>
+                    <form id="form-settings">
+                        <div class="form-group">
+                            <label for="welcome_message">Texto de Boas-Vindas (Index/Login):</label>
+                            <textarea id="welcome_message" name="welcome_message" rows="4" class="form-control"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Salvar Configurações</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal para Adicionar/Editar Conteúdo -->
+    <div id="content-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeContentModal()">&times;</span>
+            <h2><span id="modal-title">Adicionar Novo Conteúdo</span></h2>
+            <form id="content-form">
+                <input type="hidden" id="content-id" name="id">
+                <div class="form-group">
+                    <label for="content-name">Nome:</label>
+                    <input type="text" id="content-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="content-description">Descrição:</label>
+                    <textarea id="content-description" name="description" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="content-price">Preço (R$):</label>
+                    <input type="number" step="0.01" id="content-price" name="price" required>
+                </div>
+                <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
